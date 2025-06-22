@@ -28,7 +28,7 @@ def train(model, optimizer, device, scheduler, params, train_loader, test_loader
     """
     train_history = dict(train=[], l1=[], l2=[])
     test_history = dict(test=[], l1=[], l2=[])
-    min_test_loss = np.Inf
+    min_test_loss = np.inf
 
     model.train()
     loop = tqdm(range(HyperParams.max_epochs))
