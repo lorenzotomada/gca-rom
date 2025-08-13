@@ -49,7 +49,7 @@ class HyperParams:
         self.bottleneck_dim = int(argv[8])
         self.lambda_map = float(argv[9])
         self.in_channels = int(argv[10])
-        self.seed = 10
+        self.seed = 22
         self.tolerance = 1e-6
         self.learning_rate = 0.001
         self.map_act = 'tanh'

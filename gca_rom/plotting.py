@@ -66,7 +66,7 @@ def plot_latent(HyperParams, latents, latents_estimation):
     plt.title('Variance in the latent space')
     plt.ylabel('$u_N(\mu)$')
     plt.xlabel('Bottleneck')
-    plt.savefig(HyperParams.net_dir+'box_plot_latents'+HyperParams.net_run+'.png', bbox_inches='tight', dpi=500)
+    plt.savefig(HyperParams.net_dir+'box_plot_latents'+HyperParams.net_run+'.pdf', bbox_inches='tight')#, dpi=500)
     
 
 def plot_error(res, VAR_all, scaler_all, HyperParams, mu_space, params, train_trajectories, vars, p1=0, p2=-1):
@@ -276,7 +276,7 @@ def plot_truth(SNAP, VAR_all, scaler_all, HyperParams, dataset, xyz, params, com
     plt.tight_layout()
     ax.set_aspect('equal', 'box')
     ax.set_title('HF Solution field for $\mu$ = '+str(np.around(params[SNAP].detach().numpy(), 2)))
-    plt.savefig(HyperParams.net_dir+'hf_field_solution_'+str(SNAP)+''+HyperParams.net_run+comp+'.png', bbox_inches='tight', dpi=500)
+    plt.savefig(HyperParams.net_dir+'hf_field_solution_'+str(SNAP)+''+HyperParams.net_run+comp+'.pdf', bbox_inches='tight')#, dpi=500)
 
 
 def plot_error_fields(SNAP, results, VAR_all, scaler_all, HyperParams, dataset, xyz, params, comp="_U"):
@@ -363,7 +363,7 @@ def plot_latent_time(HyperParams, SAMPLE, latents, mu_space, params, param_sampl
     plt.ylabel('$s(t)$')
     plt.title('Latent state evolution $\mu = $'+ str(np.around(params[start][0:2].detach().numpy(), 2)))
     plt.grid(True, which="both", ls="-", alpha=0.5)
-    plt.savefig(HyperParams.net_dir+'latent_evolution_'+HyperParams.net_run+str(SAMPLE)+'.png', bbox_inches='tight', dpi=500)
+    plt.savefig(HyperParams.net_dir+'latent_evolution_'+HyperParams.net_run+str(SAMPLE)+'.pdf', bbox_inches='tight')#, dpi=500)
 
 
 def plot_sample(HyperParams, mu_space, params, train_trajectories, test_trajectories, p1=0, p2=1, param_frequency=False):
@@ -427,7 +427,7 @@ def plot_sample(HyperParams, mu_space, params, train_trajectories, test_trajecto
 
     ax.set_title('Sample')
     plt.tight_layout()
-    plt.savefig(HyperParams.net_dir+'sample'+HyperParams.net_run+'.png', transparent=True, dpi=500)
+    plt.savefig(HyperParams.net_dir+'sample'+HyperParams.net_run+'.pdf')#, transparent=True, dpi=500)
 
 
 def plot_comparison_fields(results, VAR_all, scaler_all, HyperParams, dataset, xyz, params, grid="horizontal", comp="_U", adjust_title=None):

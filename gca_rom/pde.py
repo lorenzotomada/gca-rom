@@ -138,8 +138,8 @@ def problem(argument):
         case 13:
             problem_name = "moving_hole_advection"
             variable = 'U'
-            mu1 = np.linspace(0.1, 0.6, 5)
-            mu2 = np.linspace(0.1, 0.6, 5)
+            mu1 = np.linspace(0.2, 0.5, 5)
+            mu2 = np.linspace(0.2, 0.5, 5)
             mu3 = np.linspace(0., 2., 101)
             mu_space = [mu1, mu2, mu3]
             n_param = 3
@@ -148,8 +148,8 @@ def problem(argument):
         case 14:
             problem_name = "square_adv"
             variable = 'U'
-            mu1 = np.linspace(-3., 3., 5)
-            mu2 = np.linspace(-3., 3., 5)
+            mu1 = np.linspace(-1., 1., 5)
+            mu2 = np.linspace(-1., 1., 5)
             mu3 = np.linspace(0., 2., 101)
             mu_space = [mu1, mu2, mu3]
             n_param = 3
