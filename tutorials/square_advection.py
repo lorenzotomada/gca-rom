@@ -177,7 +177,7 @@ plotting.plot_error_3d(results_test, VAR_test, scaler_test, HyperParams, mu_spac
 
 from gca_rom import scaling
 
-Z = scaling.inverse_scaling(VAR_all, scaler_all, HyperParams.scaling_type)
+Z = scaling.inverse_scaling(results, scaler_test, HyperParams.scaling_type)
 Z = Z.numpy()
 
 np.save(f"scaled_output_gca_{HyperParams.net_name}_bottleneck_{HyperParams.bottleneck_dim}.npy", Z)
